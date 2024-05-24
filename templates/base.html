@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %} - Chat My Docs</title>
+    <style>
+        .message {
+            padding: 10px;
+            margin: 5px;
+            background-color: #f3f3f3
+        }
+        nav a {
+            color: #d64161;
+            font-size: 3em;
+            margin-left: 50px;
+            text-decoration: none;
+        }
+
+        .alert {
+            padding: 20px;
+            margin: 5px;
+            color: #970020;
+            background-color: #ffd5de;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .element {
+            background-color: #308D46;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .query_textarea {
+          width: 100%;
+          height: 150px;
+          padding: 12px 20px;
+          box-sizing: border-box;
+          border: 2px solid #ccc;
+          border-radius: 4px;
+          background-color: #ffffff;
+          font-size: 18px;
+          resize: none;
+        }
+
+        .answer_textarea {
+          width: 100%;
+          height: 600px;
+          padding: 12px 20px;
+          box-sizing: border-box;
+          border: 2px solid #ccc;
+          border-radius: 4px;
+          background-color: #f8f8f8;
+          font-size: 18px;
+          resize: none;
+        }
+
+        .loader {
+          border: 8px solid #f3f3f3;
+          border-radius: 50%;
+          border-top: 8px solid blue;
+          border-right: 8px solid green;
+          border-bottom: 8px solid red;
+          border-left: 8px solid pink;
+          width: 30px;
+          height: 30px;
+          -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+        }
+
+        @-webkit-keyframes spin {
+          0% { -webkit-transform: rotate(0deg); }
+          100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <table>
+        <tr>
+            <td><a href="{{ url_for('index') }}">Chat My Docs</a></td>
+<!--            <td><div id="loader" class="loader"></div></td>-->
+        </tr>
+    </table>
+
+
+</nav>
+<hr>
+<div class="container">
+    {% block content %} {% endblock %}
+</div>
+</body>
+</html>

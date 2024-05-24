@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="post">
+        <label for="query">Enter your question:</label>
+        <br>
+        <textarea name="query" id="query"
+                  class="query_textarea"
+                  placeholder="Type your text here"
+                  rows="5"
+                  cols="102"
+                  >{{ request.form['query'] }}</textarea>
+        <br>
+        <button type="submit">Submit</button>
+        <input type="button" value="Clear" onclick="document.getElementById('query').value = ''">
+        <br>
+        <label for="answer">Answer response: {{ response_time }}</label>
+        <br>
+        <textarea name="answer" id="answer"
+                  class="answer_textarea"
+                  placeholder="waiting...."
+                  rows="35"
+                  cols="102"
+                  disabled
+                  >{{ answer }}</textarea>
+    </form>
+{% endblock %}
+

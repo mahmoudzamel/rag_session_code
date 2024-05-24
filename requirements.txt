@@ -1,0 +1,10 @@
+argostranslate==1.9.6
+deep-translator==1.11.4
+faiss-cpu==1.8.0
+Flask==3.0.3
+langchain==0.1.17
+langchain-community==0.0.37
+textract==1.6.5
+torch==2.3.0
+transformers==4.40.2
+translators==5.9.2
